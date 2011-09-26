@@ -33,7 +33,7 @@ EOM
 my $location = shift;
 
 # Perform query
-my $event_list = WWW::LastFM->new->geo->getEvents(
+my $event_list = WWW::LastFM->new->geo->get_events(
     ( defined $limit    ? ( limit    => $limit )    : () ),
     ( defined $distance ? ( distance => $distance ) : () ),
     ( defined $location ? ( location => $location ) : () ),

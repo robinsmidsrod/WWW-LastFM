@@ -16,7 +16,7 @@ my $filter_utf8 = $filter ? Encode::decode('UTF-8', $filter) : "";
 
 my @locations = sort
         map { $_->name_and_country }
-        WWW::LastFM->new->geo->getMetros->metros->filter_locations(
+        WWW::LastFM->new->geo->get_metros->metros->filter_locations(
             sub { $_->country_and_name =~ /\Q$filter_utf8\E/i }
         )
 ;

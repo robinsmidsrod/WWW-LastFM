@@ -15,7 +15,7 @@ has 'lastfm' => (
 
 # http://www.last.fm/api/show?service=435
 # country must be a binary encoded utf8 string
-sub getMetros {
+sub get_metros {
     my ($self, $country) = @_;
     my $xml = $self->lastfm->get(
            $self->lastfm->api_root_url
@@ -35,7 +35,7 @@ sub getMetros {
 # distance (Optional) : Find events within a specified radius (in kilometres)
 # limit (Optional) : The number of results to fetch per page. Defaults to 10.
 # page (Optional) : The page number to fetch. Defaults to first page.
-sub getEvents {
+sub get_events {
     my ($self, %opts) = @_;
     my $params = "";
     foreach my $key ( keys %opts ) {
