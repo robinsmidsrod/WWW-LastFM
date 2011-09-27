@@ -1,5 +1,5 @@
 package WWW::LastFM::Response;
-use XML::Rabbit::Root;
+use XML::Rabbit::Root 0.1.0;
 
 add_xpath_namespace 'geo' => 'http://www.w3.org/2003/01/geo/wgs84_pos#';
 
