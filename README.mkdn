@@ -6,6 +6,29 @@ WWW::LastFM - Object-oriented interface to the Last.FM API version 2.0
 
 version 0.0.1
 
+# SYNOPSIS
+
+    say join("\n",
+        map { $_->name_and_country }
+        WWW::LastFM->new->geo->get_metros()->metros->locations
+    );
+
+# DESCRIPTION
+
+A partial client implementation of the [Last.FM API](http://www.last.fm/api/). Currently only the
+`geo.getMetros` and `geo.getEvents` are implemented.
+
+# SEMANTIC VERSIONING
+
+This module uses semantic versioning concepts from [http://semver.org/](http://semver.org/).
+
+# SEE ALSO
+
+- [Moose](http://search.cpan.org/perldoc?Moose)
+- [XML::Rabbit](http://search.cpan.org/perldoc?XML::Rabbit)
+- [Config::Role](http://search.cpan.org/perldoc?Config::Role)
+- [Last.FM API](http://www.last.fm/api/)
+
 # SUPPORT
 
 ## Perldoc
