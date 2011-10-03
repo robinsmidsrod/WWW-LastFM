@@ -1,6 +1,8 @@
 package WWW::LastFM::Response::Venue;
 use XML::Rabbit;
 
+# ABSTRACT: <venue/> XML response handler
+
 # Last.FM-specific data
 has_xpath_value 'id'  => './id';
 has_xpath_value 'url' => './url';

@@ -1,6 +1,8 @@
 package WWW::LastFM::Response::MetroList;
 use XML::Rabbit;
 
+# ABSTRACT: <metros/> XML response handler
+
 use List::MoreUtils qw(uniq);
 
 has_xpath_object_list '_locations' => './metro' => 'WWW::LastFM::Response::Metro',
