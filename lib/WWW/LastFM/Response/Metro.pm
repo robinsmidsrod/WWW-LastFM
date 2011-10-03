@@ -1,6 +1,8 @@
 package WWW::LastFM::Response::Metro;
 use XML::Rabbit;
 
+# ABSTRACT: <metro/> XML response handler
+
 has_xpath_value 'name'    => './name';
 has_xpath_value 'country' => './country';
 

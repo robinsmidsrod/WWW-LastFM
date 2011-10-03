@@ -1,6 +1,8 @@
 package WWW::LastFM::Response::EventList;
 use XML::Rabbit;
 
+# ABSTRACT: <events/> XML response handler
+
 has_xpath_value 'page'       => './@page';
 has_xpath_value 'page_limit' => './@perPage';
 has_xpath_value 'page_count' => './@totalPages';
