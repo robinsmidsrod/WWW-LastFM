@@ -10,6 +10,9 @@ equivalent_modules = XML::Rabbit XML::Rabbit::Root
 # These policies we don't use
 [-Miscellanea::RequireRcsKeywords]
 
+# We use finalize_class() to minimize boilerplate
+[-Modules::RequireEndWithOne]
+
 # Allows us to set use strict;use warnings before package keyword
 [-Modules::RequireExplicitPackage]
 [Lax::RequireExplicitPackage::ExceptForPragmata]
