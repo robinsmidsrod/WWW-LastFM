@@ -33,10 +33,16 @@ sub _build_api_secret { return (shift)->config->{'API'}->{'secret'}; }
 
 # All access to the Last.FM API starts with this URL
 has 'api_root_url' => (
-    is      => 'ro',
-    isa     => 'Str',
-    default => 'http://ws.audioscrobbler.com/2.0/',
+    is         => 'ro',
+    isa        => 'Str',
+    lazy_build => 1,
 );
+
+sub _build_api_root_url {
+    my ($self) = @_;
+    return $self->config->{'API'}->{'url'}
+        || 'http://ws.audioscrobbler.com/2.0/';
+}
 
 # And finally our HTTP client that we will use to make requests
 has 'ua' => (
