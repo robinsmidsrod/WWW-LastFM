@@ -112,3 +112,4 @@ This module uses semantic versioning concepts from L<http://semver.org/>.
 * L<XML::Rabbit>
 * L<Config::Role>
 * L<Last.FM API|http://www.last.fm/api/>
+* L<Implementing WWW::LastFM, a client library to the Last.FM API, with XML::Rabbit|http://blog.robin.smidsrod.no/2011/09/30/implementing-www-lastfm-part-1>
