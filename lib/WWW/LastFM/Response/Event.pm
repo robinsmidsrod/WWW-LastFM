@@ -1,4 +1,5 @@
 package WWW::LastFM::Response::Event;
+
 use XML::Rabbit;
 
 # ABSTRACT: <event/> XML response handler

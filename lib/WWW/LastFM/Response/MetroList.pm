@@ -1,4 +1,5 @@
 package WWW::LastFM::Response::MetroList;
+
 use XML::Rabbit;
 
 # ABSTRACT: <metros/> XML response handler

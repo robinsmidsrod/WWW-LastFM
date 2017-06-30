@@ -1,4 +1,5 @@
 package WWW::LastFM::Response::Metro;
+
 use XML::Rabbit;
 
 # ABSTRACT: <metro/> XML response handler

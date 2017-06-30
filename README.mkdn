@@ -4,7 +4,7 @@ WWW::LastFM - Object-oriented interface to the Last.FM API version 2.0
 
 # VERSION
 
-version 0.0.1
+version 0.0.2
 
 # SYNOPSIS
 
@@ -18,15 +18,25 @@ version 0.0.1
 A partial client implementation of the [Last.FM API](http://www.last.fm/api/). Currently only the
 `geo.getMetros` and `geo.getEvents` are implemented.
 
+**UPDATE:** Unfortunately both `geo.getMetros` and `geo.getEvents` have
+been removed from the public LastFM API, making this module more or less
+useless until more API methods are implemented.
+
+# METHODS
+
+## get($url)
+
+A utility method for making requests, returns raw XML or throws exception if no content was generated
+
 # SEMANTIC VERSIONING
 
 This module uses semantic versioning concepts from [http://semver.org/](http://semver.org/).
 
 # SEE ALSO
 
-- [Moose](http://search.cpan.org/perldoc?Moose)
-- [XML::Rabbit](http://search.cpan.org/perldoc?XML::Rabbit)
-- [Config::Role](http://search.cpan.org/perldoc?Config::Role)
+- [Moose](https://metacpan.org/pod/Moose)
+- [XML::Rabbit](https://metacpan.org/pod/XML::Rabbit)
+- [Config::Role](https://metacpan.org/pod/Config::Role)
 - [Last.FM API](http://www.last.fm/api/)
 - [Implementing WWW::LastFM, a client library to the Last.FM API, with XML::Rabbit](http://blog.robin.smidsrod.no/2011/09/30/implementing-www-lastfm-part-1)
 
@@ -36,71 +46,77 @@ This module uses semantic versioning concepts from [http://semver.org/](http://s
 
 You can find documentation for this module with the perldoc command.
 
-  perldoc WWW::LastFM
+    perldoc WWW::LastFM
 
 ## Websites
 
 The following websites have more information about this module, and may be of help to you. As always,
 in addition to those websites please use your favorite search engine to discover more resources.
 
+- MetaCPAN
+
+    A modern, open-source CPAN search engine, useful to view POD in HTML format.
+
+    [http://metacpan.org/release/WWW-LastFM](http://metacpan.org/release/WWW-LastFM)
+
 - Search CPAN
 
-The default CPAN search engine, useful to view POD in HTML format.
+    The default CPAN search engine, useful to view POD in HTML format.
 
-[http://search.cpan.org/dist/WWW-LastFM](http://search.cpan.org/dist/WWW-LastFM)
+    [http://search.cpan.org/dist/WWW-LastFM](http://search.cpan.org/dist/WWW-LastFM)
 
 - RT: CPAN's Bug Tracker
 
-The RT ( Request Tracker ) website is the default bug/issue tracking system for CPAN.
+    The RT ( Request Tracker ) website is the default bug/issue tracking system for CPAN.
 
-[http://rt.cpan.org/NoAuth/Bugs.html?Dist=WWW-LastFM](http://rt.cpan.org/NoAuth/Bugs.html?Dist=WWW-LastFM)
+    [https://rt.cpan.org/Public/Dist/Display.html?Name=WWW-LastFM](https://rt.cpan.org/Public/Dist/Display.html?Name=WWW-LastFM)
 
 - AnnoCPAN
 
-The AnnoCPAN is a website that allows community annonations of Perl module documentation.
+    The AnnoCPAN is a website that allows community annotations of Perl module documentation.
 
-[http://annocpan.org/dist/WWW-LastFM](http://annocpan.org/dist/WWW-LastFM)
+    [http://annocpan.org/dist/WWW-LastFM](http://annocpan.org/dist/WWW-LastFM)
 
 - CPAN Ratings
 
-The CPAN Ratings is a website that allows community ratings and reviews of Perl modules.
+    The CPAN Ratings is a website that allows community ratings and reviews of Perl modules.
 
-[http://cpanratings.perl.org/d/WWW-LastFM](http://cpanratings.perl.org/d/WWW-LastFM)
+    [http://cpanratings.perl.org/d/WWW-LastFM](http://cpanratings.perl.org/d/WWW-LastFM)
 
 - CPAN Forum
 
-The CPAN Forum is a web forum for discussing Perl modules.
+    The CPAN Forum is a web forum for discussing Perl modules.
 
-[http://cpanforum.com/dist/WWW-LastFM](http://cpanforum.com/dist/WWW-LastFM)
+    [http://cpanforum.com/dist/WWW-LastFM](http://cpanforum.com/dist/WWW-LastFM)
 
 - CPANTS
 
-The CPANTS is a website that analyzes the Kwalitee ( code metrics ) of a distribution.
+    The CPANTS is a website that analyzes the Kwalitee ( code metrics ) of a distribution.
 
-[http://cpants.perl.org/dist/overview/WWW-LastFM](http://cpants.perl.org/dist/overview/WWW-LastFM)
+    [http://cpants.cpanauthors.org/dist/WWW-LastFM](http://cpants.cpanauthors.org/dist/WWW-LastFM)
 
 - CPAN Testers
 
-The CPAN Testers is a network of smokers who run automated tests on uploaded CPAN distributions.
+    The CPAN Testers is a network of smokers who run automated tests on uploaded CPAN distributions.
 
-[http://www.cpantesters.org/distro/W/WWW-LastFM](http://www.cpantesters.org/distro/W/WWW-LastFM)
+    [http://www.cpantesters.org/distro/W/WWW-LastFM](http://www.cpantesters.org/distro/W/WWW-LastFM)
 
 - CPAN Testers Matrix
 
-The CPAN Testers Matrix is a website that provides a visual way to determine what Perls/platforms PASSed for a distribution.
+    The CPAN Testers Matrix is a website that provides a visual overview of the test results for a distribution on various Perls/platforms.
 
-[http://matrix.cpantesters.org/?dist=WWW-LastFM](http://matrix.cpantesters.org/?dist=WWW-LastFM)
+    [http://matrix.cpantesters.org/?dist=WWW-LastFM](http://matrix.cpantesters.org/?dist=WWW-LastFM)
 
 - CPAN Testers Dependencies
 
-The CPAN Testers Dependencies is a website that shows a chart of the test results of all dependencies for a distribution.
+    The CPAN Testers Dependencies is a website that shows a chart of the test results of all dependencies for a distribution.
 
-[http://deps.cpantesters.org/?module=WWW::LastFM](http://deps.cpantesters.org/?module=WWW::LastFM)
+    [http://deps.cpantesters.org/?module=WWW::LastFM](http://deps.cpantesters.org/?module=WWW::LastFM)
 
 ## Bugs / Feature Requests
 
 Please report any bugs or feature requests by email to `bug-www-lastfm at rt.cpan.org`, or through
-the web interface at [http://rt.cpan.org/NoAuth/ReportBug.html?Queue=WWW-LastFM](http://rt.cpan.org/NoAuth/ReportBug.html?Queue=WWW-LastFM). You will be automatically notified of any
+the web interface at [https://rt.cpan.org/Public/Bug/Report.html?Queue=WWW-LastFM](https://rt.cpan.org/Public/Bug/Report.html?Queue=WWW-LastFM). You will be automatically notified of any
 progress on the request by the system.
 
 ## Source Code
@@ -111,7 +127,7 @@ from your repository :)
 
 [http://github.com/robinsmidsrod/WWW-LastFM](http://github.com/robinsmidsrod/WWW-LastFM)
 
-  git clone git://github.com/robinsmidsrod/WWW-LastFM.git
+    git clone git://github.com/robinsmidsrod/WWW-LastFM.git
 
 # AUTHOR
 
@@ -119,7 +135,7 @@ Robin Smidsrød <robin@smidsrod.no>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Robin Smidsrød.
+This software is copyright (c) 2017 by Robin Smidsrød.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

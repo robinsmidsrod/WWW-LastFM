@@ -1,4 +1,5 @@
 package WWW::LastFM::Response::Venue;
+
 use XML::Rabbit;
 
 # ABSTRACT: <venue/> XML response handler

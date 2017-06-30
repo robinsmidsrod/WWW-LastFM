@@ -11,7 +11,7 @@ our $VERSION = "0.0.1";
 
 # Read configuration from ~/.lastfm.ini, available in $self->config
 has 'config_filename' => ( is => 'ro', isa => 'Str', lazy_build => 1 );
-sub _build_config_filename { '.lastfm.ini' }
+sub _build_config_filename { return '.lastfm.ini' }
 with 'Config::Role';
 
 # And here we have our api key and secret
@@ -56,8 +56,12 @@ sub _build_ua {
     return LWP::UserAgent->new( agent => 'WWW::LastFM/' . $VERSION );
 }
 
-# A utility method for making requests, returns raw XML
-# or throws exception if no content was generated
+=method get($url)
+
+A utility method for making requests, returns raw XML or throws exception if no content was generated
+
+=cut
+
 sub get {
     my ($self, $url) = @_;
     confess("No URL specified") unless $url;
@@ -98,6 +102,10 @@ __END__
 
 A partial client implementation of the L<Last.FM API|http://www.last.fm/api/>. Currently only the
 C<geo.getMetros> and C<geo.getEvents> are implemented.
+
+B<UPDATE:> Unfortunately both C<geo.getMetros> and C<geo.getEvents> have
+been removed from the public LastFM API, making this module more or less
+useless until more API methods are implemented.
 
 
 =head1 SEMANTIC VERSIONING
